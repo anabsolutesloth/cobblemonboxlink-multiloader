@@ -36,4 +36,15 @@ neoForge {
     }
 }
 
+dependencies {
+    implementation "com.cobblemon:neoforge:${cobblemon_version}"
+
+    runtimeOnly "thedarkcolour:kotlinforforge-neoforge:${kff_version}"
+
+    compileOnly "top.theillusivec4.curios:curios-neoforge:${curios_version}:api"
+    runtimeOnly "top.theillusivec4.curios:curios-neoforge:${curios_version}"
+
+    runtimeOnly "mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}"
+}
+
 sourceSets.main.resources { srcDir 'src/generated/resources' }

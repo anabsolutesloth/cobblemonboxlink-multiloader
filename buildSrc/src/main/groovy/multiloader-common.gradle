@@ -42,6 +42,18 @@ repositories {
         name = 'BlameJared'
         url = 'https://maven.blamejared.com'
     }
+    maven { // Cobblemon maven
+        name = "Cobblemon"
+        url = 'https://maven.impactdev.net/repository/development/'
+    }
+    maven { //TheDarkColour's maven
+        name = "TheDarkColour"
+        url = 'https://thedarkcolour.github.io/KotlinForForge/'
+    }
+    maven { // IllusiveC4's maven
+        name = "Illusive Soulworks"
+        url = "https://maven.theillusivec4.top/"
+    }
 }
 
 // Declare capabilities on the outgoing configurations.
@@ -96,10 +108,15 @@ processResources {
             'description'                  : project.description,
             'neoforge_version'             : neoforge_version,
             'neoforge_loader_version_range': neoforge_loader_version_range,
-            "forge_version": forge_version,
-            "forge_loader_version_range": forge_loader_version_range,
             'credits'                      : credits,
-            'java_version'                 : java_version
+            'java_version'                 : java_version,
+            cobblemon_version              : cobblemon_version,
+            cobblemon_version_range        : cobblemon_version_range,
+            kff_version                    : kff_version,
+            curios_version                 : curios_version,
+            curios_version_range           : curios_version_range,
+            trinkets_version               : trinkets_version,
+            jei_version                    : jei_version
     ]
 
     filesMatching(['pack.mcmeta', 'fabric.mod.json', 'META-INF/mods.toml', 'META-INF/neoforge.mods.toml', '*.mixins.json']) {
