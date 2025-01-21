@@ -26,6 +26,8 @@ dependencies {
 
     modImplementation "com.cobblemon:fabric:${cobblemon_version}"
 
+    modImplementation "net.fabricmc:fabric-language-kotlin:${fabric_kotlin_version}"
+
     modImplementation "dev.emi:trinkets:${trinkets_version}"
 
     //runtimeOnly "mezz.jei:jei-${minecraft_version}-fabric:${jei_version}"

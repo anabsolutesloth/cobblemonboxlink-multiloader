@@ -19,7 +19,7 @@ neoForge {
 
 dependencies {
     compileOnly "com.cobblemon:neoforge:${cobblemon_version}"
-    //compileOnly "com.cobblemon:fabric:${cobblemon_version}"
+    //modImplementation "com.cobblemon:mod:${cobblemon_version}"
 }
 
 configurations {

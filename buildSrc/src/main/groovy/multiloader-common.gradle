@@ -116,7 +116,8 @@ processResources {
             curios_version                 : curios_version,
             curios_version_range           : curios_version_range,
             trinkets_version               : trinkets_version,
-            jei_version                    : jei_version
+            jei_version                    : jei_version,
+            fabric_kotlin_version          : fabric_kotlin_version
     ]
 
     filesMatching(['pack.mcmeta', 'fabric.mod.json', 'META-INF/mods.toml', 'META-INF/neoforge.mods.toml', '*.mixins.json']) {

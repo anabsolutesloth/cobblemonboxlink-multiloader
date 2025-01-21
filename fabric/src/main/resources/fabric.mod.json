@@ -16,7 +16,7 @@
     "environment": "*",
     "entrypoints": {
         "main": [
-            "com.emperdog.boxlink.BoxLinkMod"
+            "com.emperdog.boxlink.BoxLinkFabricMod"
         ]
     },
     "depends": {
