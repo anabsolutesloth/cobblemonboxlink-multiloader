@@ -1,6 +1,7 @@
 package com.emperdog.boxlink.platform;
 
 import com.emperdog.boxlink.BoxLinkCommon;
+import com.emperdog.boxlink.platform.services.BoxLinkConfig;
 import com.emperdog.boxlink.platform.services.IAccessoryModHelper;
 import com.emperdog.boxlink.platform.services.IPlatformHelper;
 
@@ -17,6 +18,8 @@ public class Services {
     public static final IPlatformHelper PLATFORM = load(IPlatformHelper.class);
 
     public static final IAccessoryModHelper ACCESSORY_MOD = load(IAccessoryModHelper.class);
+
+    public static final BoxLinkConfig CONFIG = load(BoxLinkConfig.class);
 
     // This code is used to load a service for the current environment. Your implementation of the service must be defined
     // manually by including a text file in META-INF/services named with the fully qualified class name of the service.

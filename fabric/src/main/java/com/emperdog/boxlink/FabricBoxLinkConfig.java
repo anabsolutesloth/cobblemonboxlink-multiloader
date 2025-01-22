@@ -1,5 +1,6 @@
 package com.emperdog.boxlink;
 
+import com.emperdog.boxlink.platform.services.BoxLinkConfig;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import net.fabricmc.loader.api.FabricLoader;
@@ -10,7 +11,7 @@ import java.io.Writer;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
-public class FabricBoxLinkConfig implements BoxLinkConfig{
+public class FabricBoxLinkConfig implements BoxLinkConfig {
     private static Path configFilePath;
     private static Gson gson = new GsonBuilder().setPrettyPrinting().disableHtmlEscaping().create();
 

@@ -21,7 +21,7 @@ public class BoxLinkServerPayloadHandler {
         if(player.getUUID().equals(data.uuid())) {
             Inventory playerInventory = player.getInventory();
             // skip search logic and immediately open PC if item is not required.
-            if(Services.PLATFORM.boxLinkBindRequiresItem()) {
+            if(Services.CONFIG.boxLinkBindRequiresItem()) {
                 // check stored inventory index
                 if (!isNull(storedLinkIndexes.get(player.getUUID()))
                         && playerInventory.getItem(storedLinkIndexes.get(player.getUUID())).getItem().equals(BoxLinkCommon.BOX_LINK_ITEM))

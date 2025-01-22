@@ -1,9 +1,12 @@
 package com.emperdog.boxlink;
 
+import com.emperdog.boxlink.platform.services.BoxLinkConfig;
 import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.event.config.ModConfigEvent;
 import net.neoforged.neoforge.common.ModConfigSpec;
 
+@EventBusSubscriber(modid = BoxLinkCommon.MOD_ID, bus = EventBusSubscriber.Bus.MOD)
 public class NeoForgeBoxLinkConfig implements BoxLinkConfig {
 
     private static final ModConfigSpec.Builder BUILDER = new ModConfigSpec.Builder();

@@ -1,6 +1,5 @@
 package com.emperdog.boxlink.platform;
 
-import com.emperdog.boxlink.NeoForgeBoxLinkConfig;
 import com.emperdog.boxlink.platform.services.IPlatformHelper;
 import net.neoforged.fml.ModList;
 import net.neoforged.fml.loading.FMLLoader;
@@ -25,8 +24,10 @@ public class NeoForgePlatformHelper implements IPlatformHelper {
         return !FMLLoader.isProduction();
     }
 
+    /*
     @Override
     public boolean boxLinkBindRequiresItem() {
         return NeoForgeBoxLinkConfig.boxLinkBindRequiresItem;
     }
+     */
 }
