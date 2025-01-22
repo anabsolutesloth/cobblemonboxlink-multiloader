@@ -12,7 +12,7 @@
         "issues": "https://github.com/anabsolutesloth/cobblemonboxlink-multiloader/issues"
     },
     "license": "${license}",
-    "icon": "${mod_id}.png",
+    "icon": "${mod_id}_icon.png",
     "environment": "*",
     "entrypoints": {
         "main": [
