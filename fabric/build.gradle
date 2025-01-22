@@ -30,7 +30,7 @@ dependencies {
 
     modImplementation "dev.emi:trinkets:${trinkets_version}"
 
-    //runtimeOnly "mezz.jei:jei-${minecraft_version}-fabric:${jei_version}"
+    modRuntimeOnly "mezz.jei:jei-${minecraft_version}-fabric:${jei_version}"
 }
 
 loom {
