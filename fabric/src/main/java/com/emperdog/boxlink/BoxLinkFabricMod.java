@@ -4,8 +4,10 @@ import com.cobblemon.mod.common.item.group.CobblemonItemGroups;
 import com.emperdog.boxlink.event.FabricClientEvents;
 import com.emperdog.boxlink.event.FabricServerEvents;
 import com.emperdog.boxlink.network.FabricPacketHandler;
+import net.fabricmc.api.EnvType;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
@@ -25,7 +27,8 @@ public class BoxLinkFabricMod implements ModInitializer {
         // to load your mod. You can access Fabric and Common code in this
         // project.
 
-        FabricClientEvents.register();
+        if(FabricLoader.getInstance().getEnvironmentType() == EnvType.CLIENT)
+            FabricClientEvents.register();
 
         FabricServerEvents.register();
 
