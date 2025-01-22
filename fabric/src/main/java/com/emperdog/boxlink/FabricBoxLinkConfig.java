@@ -14,7 +14,7 @@ public class FabricBoxLinkConfig implements BoxLinkConfig{
     private static Path configFilePath;
     private static Gson gson = new GsonBuilder().setPrettyPrinting().disableHtmlEscaping().create();
 
-    public static boolean boxLinkBindRequiresItem;
+    public static boolean boxLinkBindRequiresItem = true;
 
     public static void load() {
         Reader reader;
@@ -24,20 +24,21 @@ public class FabricBoxLinkConfig implements BoxLinkConfig{
 
                 Data data = gson.fromJson(reader, Data.class);
 
-                boxLinkBindRequiresItem = data.server.boxLinkBindRequiresItem;
+                boxLinkBindRequiresItem = data.boxLinkBindRequiresItem;
 
                 reader.close();
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
         }
+        save();
     }
 
     public static void save() {
         try {
             Writer writer = Files.newBufferedWriter(getConfigFilePath());
             Data data = new Data(
-                    new Data.Server(boxLinkBindRequiresItem)
+                    boxLinkBindRequiresItem
             );
 
             gson.toJson(data, writer);
@@ -55,22 +56,14 @@ public class FabricBoxLinkConfig implements BoxLinkConfig{
 
     private static class Data {
 
-        private final Server server;
+        private final boolean boxLinkBindRequiresItem;
 
-        private Data(Server server) {
-            this.server = server;
+        private Data() {
+            boxLinkBindRequiresItem = true;
         }
 
-        private static class Server {
-            private final boolean boxLinkBindRequiresItem;
-
-            private Server() {
-                boxLinkBindRequiresItem = true;
-            }
-
-            private Server(boolean boxLinkBindRequiresItem) {
-                this.boxLinkBindRequiresItem = boxLinkBindRequiresItem;
-            }
+        private Data(boolean boxLinkBindRequiresItem) {
+            this.boxLinkBindRequiresItem = boxLinkBindRequiresItem;
         }
     }
 

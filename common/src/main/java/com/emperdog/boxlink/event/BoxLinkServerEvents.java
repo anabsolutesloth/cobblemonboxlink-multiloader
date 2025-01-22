@@ -15,7 +15,7 @@ public class BoxLinkServerEvents {
 
     public static void onPlayerLoggedIn(Player player) {
         UUID playerUUID = player.getUUID();
-        if(Services.ACCESSORY_MOD.hasItemAsAccessory(player, BoxLinkCommon.BOX_LINK_ITEM)
+        if(Services.PLATFORM.boxLinkBindRequiresItem()
                 || LOGGED_IN.contains(playerUUID))
             return;
 
