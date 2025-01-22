@@ -1,0 +1,6 @@
+{
+  "amount": 1,
+  "order": 2000,
+  "icon": "cobblemonboxlink:slot/empty_box_link_slot",
+  "validator_predicates": ["trinkets:tag"]
+}
