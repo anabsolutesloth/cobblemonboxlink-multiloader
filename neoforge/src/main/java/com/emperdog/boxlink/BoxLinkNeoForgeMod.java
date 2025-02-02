@@ -21,7 +21,7 @@ import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
-import static com.emperdog.boxlink.event.NeoForgeClientEvents.openPCKey;
+import static com.emperdog.boxlink.BoxLinkClient.openPCKey;
 
 @Mod(BoxLinkCommon.MOD_ID)
 public class BoxLinkNeoForgeMod {

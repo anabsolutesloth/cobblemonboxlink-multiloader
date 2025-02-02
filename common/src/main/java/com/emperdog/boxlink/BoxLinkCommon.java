@@ -29,7 +29,7 @@ public class BoxLinkCommon {
 
     public static final String OPEN_PC_KEY_NAME = "key.cobblemonboxlink.open_pc.desc";
 
-    public static final Item BOX_LINK_ITEM = new BoxLinkItem(new Item.Properties());
+    public static final Item BOX_LINK_ITEM = new BoxLinkItem(new Item.Properties().stacksTo(1));
 
     // The loader specific projects are able to import and use any code from the common project. This allows you to
     // write the majority of your code here and load it from your loader specific projects. This example has some
@@ -48,6 +48,6 @@ public class BoxLinkCommon {
         PCStore pc = Cobblemon.INSTANCE.getStorage().getPC(player);
         PCLinkManager.INSTANCE.addLink(new PCLink(pc, player.getUUID()));
         player.level().playSound(null, player.blockPosition(), CobblemonSounds.PC_ON, SoundSource.NEUTRAL, 0.5f, 1.0f);
-        new OpenPCPacket(pc.getUuid()).sendToPlayer(player);
+        new OpenPCPacket(pc.getUuid(), 0).sendToPlayer(player);
     }
 }
