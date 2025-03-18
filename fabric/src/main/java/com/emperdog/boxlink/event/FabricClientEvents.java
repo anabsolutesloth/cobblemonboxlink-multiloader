@@ -11,7 +11,7 @@ public class FabricClientEvents {
     public static void register() {
         ClientTickEvents.START_CLIENT_TICK.register((minecraft) -> {
             if(BoxLinkClient.openPCKey.consumeClick() && Minecraft.getInstance().isWindowActive())
-                ClientPlayNetworking.send(new RequestOpenPCPacket(Minecraft.getInstance().getUser().getProfileId()));
+                ClientPlayNetworking.send(new RequestOpenPCPacket(Minecraft.getInstance().player.getUUID()));
         });
 
         KeyBindingHelper.registerKeyBinding(BoxLinkClient.openPCKey);

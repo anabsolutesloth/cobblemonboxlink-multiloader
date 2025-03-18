@@ -12,6 +12,6 @@ public class NeoForgeClientEvents {
     @SubscribeEvent
     public void onClientTick(final ClientTickEvent.Post event) {
         if(BoxLinkClient.openPCKey.consumeClick() && Minecraft.getInstance().isWindowActive())
-            PacketDistributor.sendToServer(new RequestOpenPCPacket(Minecraft.getInstance().getUser().getProfileId()));
+            PacketDistributor.sendToServer(new RequestOpenPCPacket(Minecraft.getInstance().player.getUUID()));
     }
 }
