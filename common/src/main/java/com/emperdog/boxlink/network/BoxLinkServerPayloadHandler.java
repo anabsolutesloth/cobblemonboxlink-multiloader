@@ -47,10 +47,10 @@ public class BoxLinkServerPayloadHandler {
                 }
             }
         } else BoxLinkCommon.openPCStorage(player);
-            /*
+        /*
         } else {
             throw new IllegalArgumentException("Player UUID "+ player.getUUID() +" does not match provided UUID "+ data.uuid());
         }
-             */
+        */
     }
 }
