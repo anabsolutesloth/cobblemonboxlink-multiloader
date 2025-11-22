@@ -48,6 +48,6 @@ public class BoxLinkCommon {
         PCStore pc = Cobblemon.INSTANCE.getStorage().getPC(player);
         PCLinkManager.INSTANCE.addLink(new PCLink(pc, player.getUUID()));
         player.level().playSound(null, player.blockPosition(), CobblemonSounds.PC_ON, SoundSource.NEUTRAL, 0.5f, 1.0f);
-        new OpenPCPacket(pc.getUuid(), 0).sendToPlayer(player);
+        new OpenPCPacket(pc).sendToPlayer(player);
     }
 }
