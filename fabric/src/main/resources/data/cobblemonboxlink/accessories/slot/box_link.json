@@ -1,0 +1,7 @@
+{
+  "replace": "false",
+  "amount": 1,
+  "operation": "set",
+  "order": 1000,
+  "icon": "cobblemonboxlink:gui/slot/empty_box_link_trinket_slot"
+}

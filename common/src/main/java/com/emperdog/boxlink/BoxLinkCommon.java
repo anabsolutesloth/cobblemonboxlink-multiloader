@@ -27,7 +27,7 @@ public class BoxLinkCommon {
 
     public static final Logger LOG = LoggerFactory.getLogger(MOD_NAME);
 
-    public static final String OPEN_PC_KEY_NAME = "key.cobblemonboxlink.open_pc.desc";
+    public static final String OPEN_PC_KEY_NAME = "key."+ MOD_ID +".open_pc.desc";
 
     public static final Item BOX_LINK_ITEM = new BoxLinkItem(new Item.Properties().stacksTo(1));
 

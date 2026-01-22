@@ -30,14 +30,21 @@ side = "BOTH"
 [[dependencies.${mod_id}]]
 modId="cobblemon"
 type="required"
-versionRange="${cobblemon_version_range}"
+versionRange="[${cobblemon_version_range},)"
 ordering="AFTER"
 side="BOTH"
 
 [[dependencies.${mod_id}]]
 modId="curios"
 type="optional"
-versionRange="${curios_version_range}"
+versionRange="[${curios_version_range},)"
+ordering="AFTER"
+side="BOTH"
+
+[[dependencies.${mod_id}]]
+modId="accessories"
+type="optional"
+versionRange="[${accessories_version_range},)"
 ordering="AFTER"
 side="BOTH"
 

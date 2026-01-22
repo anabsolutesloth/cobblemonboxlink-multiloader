@@ -30,6 +30,8 @@ dependencies {
 
     modImplementation "dev.emi:trinkets:${trinkets_version}"
 
+    modImplementation("io.wispforest:accessories-fabric:${accessories_version}+${minecraft_version}")
+
     modRuntimeOnly "mezz.jei:jei-${minecraft_version}-fabric:${jei_version}"
 }
 

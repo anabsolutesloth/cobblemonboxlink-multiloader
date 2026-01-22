@@ -28,6 +28,8 @@ dependencies {
 
     //modCompileOnly "com.cobblemon:neoforge:${cobblemon_version}"
     modCompileOnly "com.cobblemon:fabric:${cobblemon_version}"
+
+    modImplementation("io.wispforest:accessories-common:${accessories_version}+${minecraft_version}-mojmap")
 }
 
 configurations {
